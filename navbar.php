@@ -99,9 +99,9 @@
             <li class="submenu-link" data-target="pendidikan-menu"><a href="#">Pendidikan<i class="ri-arrow-right-s-fill"></i></a></li>
             <li class="submenu-link" data-target="kemahasiswaan-menu"><a href="#">Kemahasiswaan<i class="ri-arrow-right-s-fill"></i></a></li>
             <li class="submenu-link" data-target="award-menu"><a href="#">Award<i class="ri-arrow-right-s-fill"></i></a></li>
-            <li><a href="#">Kerjasama</a></li>
+            <li><a href="kerjasama.php">Kerjasama</a></li>
             <li class="submenu-link" data-target="download-menu"><a href="#">Download<i class="ri-arrow-right-s-fill"></i></a></li>
-            <li><a href="#">Tracer Studi</a></li>
+            <li><a href="tracerstudy.php">Tracer Studi</a></li>
         </ul>
 
         <!-- Profile Menu -->
