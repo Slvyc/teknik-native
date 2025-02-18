@@ -109,7 +109,7 @@ $result3 = $conn->query("SELECT * FROM pengumuman ORDER BY date DESC");
         <!-- pengunguman -->
          
         <section class="announcements">
-            <h2 class="title-announcement">Pengumuman</h2>
+            <h2 class="title-announcement">Pengumumann</h2>
             <?php while ($row = $result3->fetch_assoc()): ?>
             <a href="<?php echo htmlspecialchars($row['link']); ?>" class="card-link">
                 <div class="announcement">
