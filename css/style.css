@@ -353,7 +353,7 @@ right: 20px;
 font-size: 32px;
 cursor: pointer;
 color: #FFD700;
-z-index: 1110;  /* Pastikan close button di atas menu */
+z-index: 1110; 
 }
 
 .back-button-nav {
@@ -361,6 +361,42 @@ color: #FFD700;
 cursor: pointer;
 padding: 10px 0;
 display: block;
+}
+
+/* NAVBAR RESPONSIVE UNTUK LAYAR 1366PX */
+@media screen and (max-width: 1366px) {
+  nav {
+    padding: 15px 20px; 
+  }
+
+  .logo-nav img {
+    width: 180px; 
+    height: 50px; 
+  }
+
+  .menu-nav {
+    gap: 30px; 
+    margin-right: 20px;
+  }
+
+  .menu-nav li {
+    font-size: 14px; 
+    padding: 10px 0;
+  }
+
+  .menu-nav li a {
+    padding: 30px 0; 
+  }
+
+  .submenu_dropdown-nav {
+    top: 65px; 
+    font-size: 14px;
+  }
+
+  .submenu_dropdown-nav li a, 
+  .dropdown-nav li a {
+    padding: 15px 30px; 
+  }
 }
 
 @media (max-width: 768px) {
@@ -4321,6 +4357,5 @@ background-color: rgba(0, 0, 0, 0.1);
 }
 }
 /* end footer */
-
 
 
