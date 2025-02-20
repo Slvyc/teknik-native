@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body class="dosen-bg">
 <!-- navbar -->
 <?php
 include('navbar.php');
@@ -34,7 +34,7 @@ include('navbar.php');
 <!-- hero section -->
 <section class="hero">
         <div class="container-hero text-center">
-            <h1 class="display-4 fw-bold fade-in">Dosen Pengajar</h1>
+            <h1 class="display-4 fw-bold fade-in">DOSEN</h1>
             <p class="lead fade-in">Teknik Sistem Informasi</p>
         </div>
 </section>
@@ -44,9 +44,11 @@ include('navbar.php');
 <div class="container-lecture">
     <!-- Section 1 -->
     <div class="card-lecture-section">
+        <p class="text-lecture-card">Dosen Pengajar</p>
+    </div>
         <div class="row g-4">
             <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card-lecture">
                     <div class="card-header">
                         <img src="asset\img\dosen\ryan setiawann.jpg">
@@ -71,7 +73,7 @@ include('navbar.php');
             </div>
 
             <!-- Card 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card-lecture">
                     <div class="card-header">
                         <img src="asset\img\dosen\rahmat sufri.jpg">
@@ -96,7 +98,7 @@ include('navbar.php');
             </div>
 
             <!-- Card 3 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card-lecture">
                     <div class="card-header">
                         <img src="asset\img\dosen\teuku rizki.jpg">
@@ -119,14 +121,8 @@ include('navbar.php');
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Section 2 -->
-    <div class="card-lecture-section">
-        <div class="row g-4">
-            <!-- Card 4 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card-lecture">
                     <div class="card-header">
                         <img src="path/to/dosen-photo.jpg">
@@ -149,9 +145,8 @@ include('navbar.php');
                     </div>
                 </div>
             </div>
-
-            <!-- Card 5 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card-lecture">
                     <div class="card-header">
                         <img src="asset\img\dosen\anisah.jpg">
@@ -175,9 +170,7 @@ include('navbar.php');
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Additional sections can be added similarly -->
+</div>
     
 </div>
 </div>

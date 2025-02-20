@@ -410,6 +410,7 @@ display: block;
 
 .hamburger {
     display: block;
+    margin-right: -10px;
 }
 }
 /* end navbar */
@@ -1656,12 +1657,12 @@ margin-bottom: 15px;
 
 .tujuan-icon {
 color: #000;
-font-size: 1.5em; /* Sesuaikan ukuran ikon jika diperlukan */
-flex-shrink: 0; /* Mencegah ikon mengecil */
+font-size: 1.5em; 
+flex-shrink: 0; 
 }
 
 .si-tujuan-item p {
-margin: 0; /* Menghilangkan margin pada teks */
+margin: 0; 
 }
 
 @media (max-width: 768px) {
@@ -1683,11 +1684,187 @@ margin: 0; /* Menghilangkan margin pada teks */
 }
 /*end halaman visi misi teknik */
 
+/* kurikulum */
+.kurikulum-hero {
+  position: relative;
+  height: calc(60vh - var(--ft-header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9f3d9;
+  text-align: center;
+  background-color: #012d04;
+  overflow: hidden;
+  padding-top: calc(var(--ft-header-height) + 2rem);
+  margin-top: var(--ft-header-height);
+
+}     
+
+.kurikulum-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Fakultas Teknik Unaya/asset/img/backgroundfakultas.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.kurikulum-hero .container-hero{
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .kurikulum-hero {
+  height: calc(50vh - var(--ft-header-height)); 
+  padding-top: calc(var(--ft-header-height) + 1rem); 
+  }
+}
+
+.kurikulum-hero > div {
+  position: relative;
+  z-index: 2; 
+}
+
+@media (min-width: 768px) {
+  .kurikulum-hero {
+      height: 60vh;
+  }
+}
+.kurikulum-h1 {
+  margin-top: 60px;
+  text-align: center;
+  color: #012d04;
+  font-size: 2.5rem;
+  top: 20px; 
+  left: 0; 
+  width: 100%;
+  background-color: #fff; 
+  z-index: 1000; 
+}
+
+@media (max-width: 768px) {
+.kurikulum-h1 {
+  font-size: 2rem; 
+  padding: 8px 0;
+}
+}
+
+
+.kurikulum-card {
+padding:70px;
+margin-bottom: -50px;
+}
+
+.kurikulum-card h2 {
+text-align: left;
+color: #012d04;
+}
+
+.kurikulum-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.kurikulum-table {
+width: 100%;
+border-collapse: collapse;  
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+background-color: #fff; 
+transition: transform 0.3s ease-in-out; 
+}
+
+.kurikulum-table td {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.kurikulum-table th {
+  padding: 15px 15px;
+  background-color: #012d04 !important;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.kurikulum-table tbody tr:nth-child(even) {
+background-color: #e5e5e579 !important;
+color: #000; 
+}
+
+.kurikulum-table tbody tr:nth-child(odd) {
+background-color: #fff !important;
+color: #000;
+}
+
+
+.total-sks {
+font-weight: bold;
+background-color: #f9f9f9 !important;
+text-align: center;
+}
+
+.mk-pilihan {
+background-color: #ffd700 !important;
+font-weight: bold;
+text-align: center;
+}
+
+.kurikulum-table a.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.kurikulum-table a.btn:hover{
+  color: #012d04;
+}
+
+.kurikulum-table a.btn i{
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+.kurikulum-card {
+  padding: 20px; 
+}
+
+.kurikulum-table th,
+.kurikulum-table td {
+  font-size: 0.8rem; 
+  padding: 6px 10px; 
+}
+
+.kurikulum-table-wrapper{
+  margin-right: -20px;
+}
+}
+/* end Kurikulum */
+
 /* PENGHARGAAN */
 .award-container {
 max-width: 1200px;
 margin: 0 auto;
 padding: 20px;
+margin-bottom: 14%;
 }
 
 .award-table {
@@ -1858,6 +2035,8 @@ font-size: 0.8rem;
 
 
 /* END PENGHARGAAN */
+
+/* KERJASAMA */
 
 /* LINK PENGHARGAAN */
 
@@ -2808,7 +2987,7 @@ box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Meningkatkan bayangan */
 
 /* Beasiswa.php */
 .body-beasiswa{
-background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
 }
 
 .container-beasiswa-fluid{
@@ -3188,7 +3367,7 @@ align-self: stretch;
 }
 
 .body-lab{
-background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
 }
 
 .container-lab{
@@ -3485,194 +3664,203 @@ color: #012d04;
 /* end perpus */
 
 /* Dosen */
-.container-lecture {
-padding: 50px;
-gap: 30px;
-background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+
+.dosen-bg{
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
 }
 
-/* Card styling */
-.card-lecture{
-background-color: #ffffff;
-border: none;
-width: 100%;
-border-radius: 16px;
-overflow: hidden;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-position: relative;
-color: #4a4a4a;
-height: 100%;
-margin-bottom: 20px; /* Add spacing between cards */
-border-bottom: 5px solid #012d04; /* Add a bottom border */
+.container-lecture {
+  max-width: 1400px;
+  margin: 10px auto;
+  padding: 70px;
+}
+
+.text-lecture-card{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: start;
+  margin-left: 70px;
+  position: relative;
+}
+
+/* .news-titles::before, */
+.text-lecture-card::after {
+  content: "";
+  position: absolute;
+  left: 400px;
+  top: 57%;
+  width: 20%;
+  height: 4px;
+  background-color: #ffd700; 
+  }
+
+.card-lecture-section{
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+  background-color: #012d04;
+  padding: 50px 0 50px 0;
+  margin-left: -160px;
+  width: 1550px;
+  margin-bottom: -200px;
+  border-top-right-radius: 1000px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 350px;
+}
+
+.card-lecture {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  background: #ffffff;
+  border-radius: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  /* border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
 }
 
 .card-lecture:hover {
-transform: translateY(-8px);
-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  background-color: #e4e4e4;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: none;
 }
 
-/* Header section with profile image */
 .card-header {
-background-color: #012d04;
-padding: 20px;
-text-align: center;
-color: #ffffff;
-}
-
-.card-header h5{
-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #000, #012d04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-header img {
-width: 110px;
-height: 110px;
-border-radius: 50%;
-border: 4px solid #ffffff;
-transition: transform 0.4s ease, box-shadow 0.4s ease;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  margin-bottom: 30px;
 }
 
-.card-lecture:hover .card-header img {
-transform: scale(1.1);
-box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
-}
-
-
-/* Card body and quote */
-.card-body {
-text-align: center;
-padding: 20px;
-font-size: 0.95em;
-}
-
-.nidn {
-color: #666;
-margin: 15px 0;
-}
-
-/* Lecturer name and department */
 .lecturer-name {
-font-size: 1.3em;
-font-weight: bold;
-padding-top: 20px;
-color: #012d04;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .lecturer-position {
-color: #ffffff;
-font-size: 0.85em;
-margin: 10px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
 
-/* Information section */
+.card-body {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.nidn {
+  margin-top: 23px;
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
 .card-info {
-background: rgba(255, 255, 255, 1);
-padding: 10px;
-font-size: 0.85em;
-text-align: center;
-color: #333;
-position: absolute;
-bottom: 0;
-width: 100%;
-opacity: 0;
-transform: translateY(30%);
-transition: opacity 0.4s ease, transform 0.4s ease;
-border-bottom-left-radius: 16px;
-border-bottom-right-radius: 16px;
-box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card-info p {
-margin-top: 10px;
-}
-
-.card-info h6 {
-font-weight: bold;
-margin-top: 20px;
-margin-bottom: 30px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  bottom: -100%;
+  transition: bottom 0.4s ease-in-out;
 }
 
 .card-lecture:hover .card-info {
-opacity: 1;
-height: 100%;
-transform: translateY(0);
+  bottom: 0;
+  background-color: #fff;
 }
 
-/* Button styling */
-.btn-publications {
-background-color: #012d04;
-font-weight: bold;
-border: none;
-color: #ffffff;
-border-radius: 6px;
-padding: 10px 15px;
-margin-top: 100px;
-margin-bottom: 20px;
-transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-font-size: 0.9em;
+.card-info h6 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #FFD700;
 }
 
-.btn-publications:hover {
-background-color: #a3b18a;
-color: #000;
-transform: scale(1.05);
+.card-info p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-.kinerja-btn{
-text-decoration: none;
-background-color: #012d04;
-font-weight: bold;
-border: none;
-color: #ffd700;
-border-radius: 6px;
-padding: 10px 15px;
-margin-top: 160px;
-transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-font-size: 0.9em;
+.btn-publications, .kinerja-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.kinerja-btn:hover {
-background-color: #a3b18a;
-color: #000;
-transform: scale(1.05);
+.btn-publications:hover, .kinerja-btn:hover {
+  color: #ffd700;
 }
 
-/* Section Styling */
-.card-lecture-section {
-margin-bottom: 40px; /* Space between sections */
-padding: 15px;
-background-color: #a3b18a; /* Slight background for each section */
-border-radius: 16px;
-
+.btn-publications{
+  margin-top: 130px;
 }
 
-@media (max-width: 768px){
-
-.container-lecture{
-  padding: 20px;
+.kinerja-btn {
+  margin-top: 10px;
 }
 
-.card-lecture-section {
-  margin-bottom: 0; /* Reduced margin for larger screens */
-  padding: 10px;
-}
+@media (max-width: 768px) {
 
-.card-lecture{
-  max-width: 200%;
-}
+  .container-lecture{
+    padding: 30px;
+  }
 
-}
+  .lecturer-name {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
 
+  .text-lecture-card {
+      font-size: 24px;
+      margin-left: 100px;
+      margin-top: 5px;
+      text-align: center;
+  }
 
-/* Footer Styling */
-footer {
-text-align: center;
-background-color: #1c1c1e;
-color: #d9d9d9;
-padding: 20px 0;
-margin-top: 50px;
-font-size: 1rem;
+  .text-lecture-card::after {
+    display: none;
+
+  }
+
+  .card-lecture-section {
+      padding: 20px 5px;
+      width: 450px;
+      height: 80px;
+      margin-bottom: 30px;
+      border-bottom-right-radius: 1000px;
+
+  }
+
+  .card-lecture{
+    width: 100%;                                                                                                                                                                ;
+  }
 }
 /* end dosen */
 
@@ -3840,136 +4028,10 @@ font-weight: bold;
     line-height: 1.6;
 }
 }
-/* Style untuk kartu kerjasama */
-.kerjasama-title-header {
-font-size: 1.9rem;
-font-weight: bold;
-margin-top: 10px;
-margin-bottom: 40px;
-color: #012d04;
-}
-
-.kerjasama-title-header::after {
-content: "";
-display: block;
-width: 40%; 
-height: 2px;
-background-color: #ffd700; 
-margin-top: 10px;
-margin-bottom: 30px; 
-margin-left: auto;
-margin-right: auto; 
-}
-
-.kerjasama-card {
-border: none;
-border-radius: 15px;
-overflow: hidden;
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease;
-}
-
-.kerjasama-card:hover {
-transform: translateY(-10px);
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Gambar kartu */
-.kerjasama-card-image {
-position: relative;
-overflow: hidden;
-height: 200px; /* Atur tinggi sesuai kebutuhan */
-}
-
-.kerjasama-card-img-top {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.3s ease;
-}
-
-.kerjasama-card:hover .kerjasama-card-img-top {
-transform: scale(1.1);
-}
-
-/* Judul dan teks pada kartu */
-.kerjasama-card-title {
-color: #012d04;
-font-weight: bold;
-margin-bottom: 1rem;
-}
-
-.kerjasama-card-body {
-padding: 1rem;
-}
-
-.kerjasama-card-body p {
-font-size: 14px;
-color: #666;
-margin-bottom: 1.5rem;
-}
-
-/* Style untuk judul dan tanggal posting */
-.post-title {
-font-weight: bold;
-color: #012d04;
-}
-
-.post-meta {
-color: #888;
-font-size: 0.9rem;
-}
-
-/* Title berita utama */
-.news-title {
-font-size: 2rem;
-font-weight: bold;
-color: #012d04;
-text-align: center;
-margin-bottom: 2rem;
-}
-
-/* Style untuk carousel */
-.carousel-inner {
-display: flex;
-align-items: center;
-}
-
-.carousel-item {
-transition: transform 0.6s ease;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-background-color: rgba(52, 76, 52, 0.8);
-border-radius: 50%;
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-background-color: #2a3e2a;
-}
-
-/* Responsive untuk perangkat kecil */
-@media (max-width: 768px) {
-.news-title {
-  font-size: 1.5rem;
-}
-.kerjasama-card-image {
-  height: 150px;
-}
-.post-meta {
-  font-size: 0.8rem;
-}
-.kerjasama-card-body p {
-  font-size: 12px;
-}
-}
-/* end kemahasiswaan Bem */
 
 /* kerjasama.php */
 .body-kerjasama {
-background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
 }
 
 .table-responsive {
@@ -4005,90 +4067,99 @@ text-decoration: none;
 color: #000;
 }
 
-@media(max-width: 768px){
-.table {
-  border-radius: 8px;
-  overflow: hidden;
-}
+/* Responsive Table */
+@media (max-width: 768px) {
+  .table-container {
+      padding: 20px;
+      margin-right: 20px;
+  }
 
-.table thead {
-  display: none;
-}
+  .table th, .table td {
+    font-size: 0.8rem; 
+    padding: 6px 10px;
+  }
 
-.table tbody tr {
-  display: block; 
-  border: 2px solid #012d04; 
-  border-radius: 8px;
-  margin-bottom: 20px;
-  padding: 10px; 
-}
-
-.table tbody td {
-  display: block;
-  font-size: 15px; 
-  text-align: justify;
-  padding: 10px 15px; 
-  position: relative;
-  padding-left: 40%; 
-  color: #000; 
-  border-bottom: 1px solid #c2c0c0;
-}
-
-.table tbody td::before {
-  content: attr(data-label);
-  position: absolute;
-  left: 10px;
-  font-weight: bold;
-  font-size: 13px; 
-  color: #000; 
-  text-transform: uppercase;
-}
-
-.table tbody td:last-child {
-  border-bottom: none; 
-}
+  .table-responsive {
+      overflow-x: auto;
+      margin-right: -20px;
+  }
 }
 /* end kerja sama */
 
-/*donwload*/
-/* Download Page Specific Styles */
-.download-content {
-background-color: #f8f9fa;
+/* MENU DOWNLOAD */
+
+.download-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
 }
 
 .download-table {
-margin-bottom: 0;
+  width: 100%;
+  border-collapse: collapse;
 }
 
+
 .download-table-header th {
-font-weight: 600;
+  font-weight: 600;
+  background-color: #012d04;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+}
+
+.download-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .download-data-name {
-font-weight: 500;
+  font-weight: 500;
 }
 
 .download-data-action {
-text-align: center;
+  text-align: center;
 }
 
 .download-btn {
-min-width: 100px;
+  min-width: 120px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #198754;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #145c32;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-.download-table {
-    font-size: 14px;
-}
+  .download-table th,
+  .download-table td {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
 
-.download-btn {
+  .download-btn {
     min-width: 80px;
-}
+    font-size: 0.75rem;
+  }
+
+  .download-table-wrapper {
+    margin-right: -12px;
+  }
 }
 
 .download-pagination-wrapper {
-margin-top: 20px;
+margin-top: 10px;
 }
 
 .download-pagination-list {
@@ -4155,19 +4226,18 @@ border-color: #dee2e6;
 
 /* Responsive styling */
 @media (max-width: 768px) {
-.download-page-link {
-    padding: 6px 12px;
-    font-size: 14px;
-}
+  .download-pagination-list {
+    flex-wrap: wrap;
+  }
 
-.download-page-item:first-child .download-page-link,
-.download-page-item:last-child .download-page-link {
-    min-width: 100px;
-}
+  .download-page-link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
 }
 /*end donwload*/
 
-/* Traacer Study */
+/* Tracer Study */
 .heroTracerStudy {
 background-image: url('Teknik-Unaya/asset/img/tracerstudy.png'); 
 background-size: cover;
@@ -4271,13 +4341,13 @@ color: #000;
 /* Responsive Adjustments */
 @media (max-width: 768px) {
 .heroTracerStudy {
-  margin-top: -10px;
-  height: 200px; 
+  margin-top: -90px;
+  height: 300px;
   position: relative;
 }
 
 .headerTracerStudy {
-  margin-top: -40px;
+  margin-top: -70px;
 }
 
 .headerTracerStudy h1 {
