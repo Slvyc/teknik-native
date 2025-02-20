@@ -405,7 +405,7 @@ display: block;
 }
 
 .logo-nav{
-    margin-left: -25px;
+    margin-left: -15px;
 }
 
 .hamburger {
@@ -415,11 +415,64 @@ display: block;
 }
 /* end navbar */
 
-/* landing page */
+.pagination-container {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  background: none !important; 
+  background-color: transparent !important; 
+  border: none !important;
+  padding: 10px 0;
+  margin-top: -30px;
+}
 
+.pagination {
+background: #012d04;
+  padding: 10px 20px;
+  margin: 0 0 0 0;
+  border-radius: 15px;
+  display: inline-flex;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-item .page-link {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin: 0 6px;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  padding: 8px 15px;
+  font-weight: 600;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pagination .page-item.active .page-link {
+  background: #FFD700;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .pagination-container {
+      justify-content: center; 
+  }
+  .pagination .page-item .page-link {
+      padding: 6px 10px;
+      font-size: 14px;
+  }
+}
+
+/* HERO */
 .hero {
 position: relative;
-height: calc(60vh - var(--ft-header-height));
+height: 60vh;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -427,8 +480,7 @@ color: #f9f3d9;
 text-align: center;
 background-color: #012d04;
 overflow: hidden;
-padding-top: calc(var(--ft-header-height) + 2rem);
-margin-top: var(--ft-header-height);
+padding: 20px;
 }
 
 .hero::before {
@@ -451,17 +503,17 @@ position: relative;
 z-index: 2;
 }
 
-/* Media query for small devices */
 @media (max-width: 768px) {
-.hero {
-    height: calc(50vh - var(--ft-header-height));
-    padding-top: calc(var(--ft-header-height) + 1rem);
-}
-}
-
-@media (min-width: 768px) {
   .hero {
-      height: 60vh;
+    height: 35vh;
+  }
+
+  .container-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .container-hero p {
+    font-size: 1.2rem;
   }
 }
 
@@ -469,9 +521,10 @@ z-index: 2;
 position: relative;
 z-index: 2;
 }
-/* end landing page */
 
-/*halaman index*/
+/* END HERO */
+
+/* INDEX START */
 /* video */
 .index-video-hero {
 position: relative;
@@ -1734,7 +1787,8 @@ margin: 0;
 
 @media (min-width: 768px) {
   .kurikulum-hero {
-      height: 60vh;
+      height: 80vh;
+      margin-top: 50px;
   }
 }
 .kurikulum-h1 {
@@ -2303,8 +2357,8 @@ font-size: 0.8rem; /* Adjust the icon size */
 /* Media query untuk perangkat kecil (mobile) */
 @media (max-width: 768px) {
   .si-hero {
-    height: calc(50vh - var(--ft-header-height)); 
-    padding-top: calc(var(--ft-header-height) + 1rem); /* Sesuaikan tinggi hero section di layar kecil */
+    height: calc(70vh - var(--ft-header-height)); 
+    padding-top: calc(var(--ft-header-height) + 3rem); /* Sesuaikan tinggi hero section di layar kecil */
   }
 }
 
@@ -2315,7 +2369,7 @@ font-size: 0.8rem; /* Adjust the icon size */
 
 @media (min-width: 768px) {
   .si-hero {
-      height: 60vh;
+      height: 100vh;
   }
 }
 
@@ -2352,10 +2406,6 @@ color: white;
 .si-visimisi, .si-tujuan{
   font-weight: bold;
   color:#000;
-}
-
-.desc-singkat{
-
 }
 
 
@@ -3227,17 +3277,9 @@ border-bottom-right-radius: 8px;
 }
 }
 
-/* Adjustments for hero section */
-@media (max-width: 768px) {
-.hero {
-  height: calc(50vh - var(--ft-header-height)); /* Adjust height for smaller screens */
-  padding-top: calc(var(--ft-header-height) + 1rem); /* Adjust padding */
-}
-}
-
 /* Adjustments for buttons and badges */
 .elearning-btn {
-width: 100%; /* Full width for buttons on small screens */
+width: 100%; 
 }
 
 .elearning-badge {
@@ -3695,18 +3737,6 @@ color: #012d04;
   background-color: #ffd700; 
   }
 
-.card-lecture-section{
-  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
-  background-color: #012d04;
-  padding: 50px 0 50px 0;
-  margin-left: -160px;
-  width: 1550px;
-  margin-bottom: -200px;
-  border-top-right-radius: 1000px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  height: 350px;
-}
-
 .card-lecture {
   position: relative;
   width: 100%;
@@ -4030,6 +4060,10 @@ font-weight: bold;
 }
 
 /* kerjasama.php */
+
+.table-container{
+  background-color: transparent !important;
+}
 .body-kerjasama {
 background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
 }

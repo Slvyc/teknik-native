@@ -1,6 +1,18 @@
 <?php
 include 'db.php';
-$result = $conn->query("SELECT * FROM kerjasama ORDER BY date DESC");
+
+// Pagination setup
+$limit = 10; // Jumlah data per halaman
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$start = ($page - 1) * $limit;
+
+// Ambil total data
+$total_result = $conn->query("SELECT COUNT(*) AS total FROM kerjasama");
+$total_row = $total_result->fetch_assoc();
+$total_pages = ceil($total_row['total'] / $limit);
+
+// Ambil data dengan pagination
+$result = $conn->query("SELECT * FROM kerjasama ORDER BY date DESC LIMIT $start, $limit");
 ?>
 
 <!doctype html>
@@ -27,9 +39,7 @@ $result = $conn->query("SELECT * FROM kerjasama ORDER BY date DESC");
     <!-- remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-    <style>
-     
-    </style>
+
 </head>
 
 <body class="body-kerjasama">
@@ -83,8 +93,37 @@ include('navbar.php');
             ?>    
         </tbody>
       </table>
+      <!-- Pagination -->
+    <div class="pagination-container">
+        <ul class="pagination justify-content-end">
+            <?php if ($page > 1): ?>
+                <li class="page-item">
+                    <a class="page-link" href="?page=1"><i class="fas fa-angle-double-left"></i></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<?= $page - 1 ?>"><i class="fas fa-angle-left"></i></a>
+                </li>
+            <?php endif; ?>
+
+            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
+                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                </li>
+            <?php endfor; ?>
+
+            <?php if ($page < $total_pages): ?>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<?= $page + 1 ?>"><i class="fas fa-angle-right"></i></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<?= $total_pages ?>"><i class="fas fa-angle-double-right"></i></a>
+                </li>
+            <?php endif; ?>
+        </ul>
     </div>
   </div>   
+</div>
+</div>
 <!-- end content -->
 
 <!-- Footer -->
